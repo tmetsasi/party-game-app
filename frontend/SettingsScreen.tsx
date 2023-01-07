@@ -4,8 +4,9 @@ import { View, Text, Button } from "react-native";
 export const SettingsScreen: React.FC<SettingsScreenProps> = (props) => {
     return (
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Settings Screen</Text>
-        <Button title='Go to Profile' onPress={() => props.navigation.push("Profile")} />
+        <Text>Asetukset, tästä ei pääse muualle kuin takaisin edelliseen näkymään</Text>
+        
+        <Button title="Takaisin edelliseen" onPress={() => props.navigation.goBack()} />
       </View>
     );
   };
