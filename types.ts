@@ -2,14 +2,19 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 
 export type RootStackParamList = {
-    Home: undefined;
-    Settings: undefined;
-    Profile: undefined;
+    Koti: undefined;
+    Pelivalikko: undefined;
+    Asetukset: undefined;
+    Esimerkkipeli: {jaa: string, joo: string};
+    Kakkosnäyttö: {para: string, toine: number};
   };
 
- export type HomeScreenProps = NativeStackScreenProps<RootStackParamList, "Home">;
+ export type HomeScreenProps = NativeStackScreenProps<RootStackParamList, "Koti">;
 
- export type SettingsScreenProps = NativeStackScreenProps<RootStackParamList, "Settings">;
+ export type SettingsScreenProps = NativeStackScreenProps<RootStackParamList, "Pelivalikko">;
 
- export type ProfileScreenProps = NativeStackScreenProps<RootStackParamList, "Settings">;
+ export type ProfileScreenProps = NativeStackScreenProps<RootStackParamList, "Asetukset">;
 
+ export type ExampleScreenProps = NativeStackScreenProps<RootStackParamList, "Esimerkkipeli">;
+
+ export type SecondScreenProps = NativeStackScreenProps<RootStackParamList, "Kakkosnäyttö">;
