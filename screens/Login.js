@@ -62,7 +62,7 @@ export default function Login({ navigation }) {
           onChangeText={setPassword} />
         <View style={[AppStyles.rowContainer, AppStyles.topMargin]}>
           <Text style={AppStyles.lightText}>Ei vielä käyttäjätiliä? </Text>
-          <InlineTextButton text="Tehdään!" onPress={() => navigation.navigate("SignUp")} />
+          <InlineTextButton text="Tehdään !" onPress={() => navigation.navigate("SignUp")} />
         </View>
         <View style={[AppStyles.rowContainer, AppStyles.bottomMargin]}>
           <Text style={AppStyles.lightText}>Unohdin sanasanani? </Text>
