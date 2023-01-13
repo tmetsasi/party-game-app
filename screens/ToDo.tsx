@@ -131,7 +131,6 @@ export default function ToDo({ navigation }) {
       </Modal>
       <Text style={AppStyles.header}>ToDo</Text>
       {auth.currentUser.emailVerified ? showContent() : showSendVerificationEmail()}
-      <Button title='Kirjaudu sisään' onPress={() => navigation.navigate("Login")}/>
     </SafeAreaView>
   )
 }
