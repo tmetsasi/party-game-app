@@ -1,27 +1,38 @@
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { RootStackParamList } from "./types";
-import { HomeScreen } from "./frontend/HomeScreen";
-import { GameScreen } from "./frontend/GameScreen";
-import { SettingsScreen } from "./frontend/SettingsScreen";
-import { ExampleGame } from "./frontend/firstGame/ExampleGame";
-import { SecondScreen } from "./frontend/firstGame/Second";
+import Login from './frontend/screens/Login';
+import SignUp from './frontend/screens/SignUp';
+import ResetPassword from './frontend/screens/ResetPassword';
+import ToDo from './frontend/screens/ToDo';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ManageAccount from './frontend/screens/ManageAccount';
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator();
 
-function App() {
+export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name='Koti' component={HomeScreen} />
-        <Stack.Screen name='Pelivalikko' component={GameScreen} />
-        <Stack.Screen name='Asetukset' component={SettingsScreen} />
-        <Stack.Screen name='Esimerkkipeli' component={ExampleGame} />
-        <Stack.Screen name="Kakkosnäyttö" component={SecondScreen} />
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{headerShown: false}} />
+        <Stack.Screen
+          name="SignUp"
+          component={SignUp}
+          options={{headerShown: false}} />
+        <Stack.Screen
+          name="ResetPassword"
+          component={ResetPassword}
+          options={{headerShown: false}} />
+        <Stack.Screen
+          name="ManageAccount"
+          component={ManageAccount}
+          options={{headerShown: false}} />
+        <Stack.Screen
+          name="ToDo"
+          component={ToDo}
+          options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
-export default App;

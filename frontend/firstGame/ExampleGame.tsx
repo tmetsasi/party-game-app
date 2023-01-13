@@ -19,9 +19,8 @@ export const ExampleGame: React.FC<ExampleScreenProps> = (props) => { 
 
       <>
       <TextInput
-        multiline
-        placeholder="What's on your mind?"
-        style={{ height: 200, padding: 10, backgroundColor: 'white' }}
+        
+        placeholder="?"
         value={postText}
         onChangeText={setPostText}
       />
